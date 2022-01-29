@@ -452,7 +452,9 @@ Type* Parser::typeFunction(std::string& str)
 		std::string msg = ("<type '" + varPtr->getType() + "'>");
 		String* msgPtr = new String(msg);
 		msgPtr->SetIstTemp(true);
+		msgPtr->setUserCreation(true); // set the String as userCreation to make the interpreter know not to deliever it as normal object that the user created
 		return msgPtr;
+
 	}
 	else
 	{
@@ -462,11 +464,11 @@ Type* Parser::typeFunction(std::string& str)
 		std::string msg = ("<type '" + varPtr->getType() + "'>");
 		String* msgPtr = new String(msg);
 		msgPtr->SetIstTemp(true);
+		msgPtr->setUserCreation(true); // set the String as userCreation to make the interpreter know not to deliever it as normal object that the user created
 		delete (varPtr);
 		return msgPtr;
+
 	}
-	//msgToPrint->SetIstTemp(true); // by setting it temp(true) it will be vanished after we print it
-	//return msgToPrint;
 
 };
 
@@ -497,24 +499,28 @@ Type* Parser::lenFunction(std::string& str)
 	Type* varPtr = Parser::parseString(argFunction);
 	//Sequence* newVarPtr = varPtr;
 
-	if (varPtr->getType() != "List" && varPtr->getType() != "String")
+	if (varPtr != NULL && varPtr->getIsUserCreation() == false)
 	{
-		//TypeError: object of type ñintò has no len() .
-		std::string msg = "TypeError: object of '" + varPtr->getType() + "' has no len() .";
-		throw TypeError(msg);
-		return nullptr;
-	}
-	else
-	{
-		std::string msg = varPtr->getLength();
-		Integer* msgPtr = new Integer(stoi(msg));
-		msgPtr->SetIstTemp(true); // set as temp to delete it after we print the length
-		if (Parser::getVariableValue(argFunction) == NULL)
+		if (varPtr->getType() != "List" && varPtr->getType() != "String")
 		{
-			delete varPtr; // if the argument wasnt a name in our data base we will delete it after we create it
+			//TypeError: object of type ñintò has no len() .
+			std::string msg = "TypeError: object of '" + varPtr->getType() + "' has no len() .";
+			throw TypeError(msg);
+			return nullptr;
 		}
-		return msgPtr;
+		else
+		{
+			std::string msg = varPtr->getLength();
+			Integer* msgPtr = new Integer(stoi(msg));
+			msgPtr->SetIstTemp(true); // set as temp to delete it after we print the length
+			if (Parser::getVariableValue(argFunction) == NULL)
+			{
+				delete varPtr; // if the argument wasnt a name in our data base we will delete it after we create it
+			}
+			return msgPtr;
+		}
 	}
+	throw SyntaxException("SyntaxError: invalid syntax in len() function");
 };
 
 
