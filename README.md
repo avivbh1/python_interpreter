@@ -20,7 +20,7 @@ simply write your code lines in python
 
 ### Executing program
 
-Simpy start the main file with double click on _main.exe_ and start write in python
+Simpy start the main file with double click on _my_python.exe_ in the Debug file and start write in python
 
 ## Help
 
