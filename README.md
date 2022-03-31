@@ -15,8 +15,6 @@ simply write your code lines in python
 
 ## Getting Started
 
-### Dependencies
-
 ### Executing program
 
 Simpy start the program with double click on _my_python.exe_ in the Debug directory and start write in python
