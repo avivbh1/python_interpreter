@@ -20,11 +20,11 @@ simply write your code lines in python
 
 ### Executing program
 
-Simpy start the main file with double click on _my_python.exe_ in the Debug file and start write in python
+Simpy start the program with double click on _my_python.exe_ in the Debug directory and start write in python
 
 ## Help
 
-my python interpreter has a very precise exception handler and it will help you fix your code line when you have a mistake
+my python interpreter has a very precise exceptions handler and it will help you fix your code line when you have a mistake
 
 ## Authors
 
