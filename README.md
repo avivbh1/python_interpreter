@@ -1,6 +1,6 @@
 # python interpreter
 
-primitive python interpreter
+my python interpreter written in c++
 
 ## Features
 * supporting int, str, bool, list 
