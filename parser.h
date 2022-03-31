@@ -34,16 +34,6 @@ public:
 	static Type* delFunction(std::string& str);
 	static Type* typeFunction(std::string& str);
 
-	//check input if it is an arithmetic opeartion
-	static bool isAddingOperation(std::string& str);
-	static bool isSubstractingOperation(std::string& str);
-	static bool isMullOperation(std::string& str);
-
-	// arithmetic functions
-	static Type* addingOperation(std::string& str);
-	static Type* substractingOperation(std::string& str);
-	static Type* mullOperation(std::string& str);
-
 	static void cleanMemoryOfObject();
 	
 };

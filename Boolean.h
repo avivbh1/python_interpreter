@@ -12,6 +12,7 @@ public:
 	std::string getType() const override { return "Boolean"; }
 	std::string getLength() const override { return "TypeError: object of type ‘Boolean’ has no len() ."; }
 
+	// arithmetic operators
 	Boolean* operator*(Boolean* object) const { return nullptr; } // boolean type has no multiply ability
 	Boolean* operator+(Boolean* object) const { return nullptr; } // boolean type has no add ability
 	Boolean* operator-(Boolean* object) const { return nullptr; } // boolean type has no substruct ability

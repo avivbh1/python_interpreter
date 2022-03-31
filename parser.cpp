@@ -80,6 +80,8 @@ Type* Parser::parseString(std::string str)
 			thisVarPtr->SetIstTemp(true); // setting it as temp because we want to delete the object after we print it
 			return thisVarPtr;
 		}
+		
+
 	}
 	return NULL;
 };
@@ -522,34 +524,3 @@ Type* Parser::lenFunction(std::string& str)
 	}
 	throw SyntaxException("SyntaxError: invalid syntax in len() function");
 };
-
-
-bool isAddingOperation(std::string& str)
-{
-	if (str.find('+') != std::string::npos)
-	{
-		return true;
-	}
-	return false;
-};
-
-
-bool isSubstractingOperation(std::string& str)
-{
-	if (str.find('-') != std::string::npos)
-	{
-		return true;
-	}
-	return false;
-};
-
-
-bool isMullOperation(std::string& str)
-{
-	if (str.find('*') != std::string::npos)
-	{
-		return true;
-	}
-	return false;
-};
-

@@ -13,6 +13,7 @@ public:
 	std::string getType() const override { return "Integer"; }
 	std::string getLength() const override { return "TypeError: object of type ‘int’ has no len() ."; }
 
+	// arithmetic operators
 	Integer* operator*(Integer* object) const ;     // multiply between integers will myltiply their values
 	Integer* operator+(Integer* object) const ;    // add between integers will sum their values
 	Integer* operator-(Integer* object) const ;   // substract between integers will substract their values

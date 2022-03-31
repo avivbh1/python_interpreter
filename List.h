@@ -14,9 +14,9 @@ public:
 	void insertToList(Type* objectPtr);
 	std::string getLength() const override { return std::to_string(listOfValues.size()); }
 
-	// operators
+	// arithmetic operators
 	List* operator*(List* object) const { return nullptr; };    // mull isnt available in Lists
-	List* operator+(List* listOfObjects) const;				        // add between strings will connect their lists
+	List* operator+(List* listOfObjects) const;				   // add between strings will connect their lists
 	List* operator-(List* object) const { return nullptr; }   // substract isnt valiable in lists
 
 	~List();

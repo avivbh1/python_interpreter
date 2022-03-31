@@ -20,3 +20,4 @@ String* String::operator+(String* object) const
 	String* newVarPtr = new String(newTextValue);
 	return newVarPtr;
 };
+

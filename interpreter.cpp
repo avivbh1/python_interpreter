@@ -32,13 +32,6 @@ int main(int argc, char** argv)
 		{
 			Type* ptrToVar = Parser::parseString(input_string);
 
-			std::cout << "data base: " << std::endl;
-			for (auto it : Parser::_variables)
-			{
-				std::cout << it.first << " : " << it.second << std::endl;
-			}
-			std::cout << " ------ \n" << std::endl;
-
 			if (ptrToVar != NULL && ptrToVar->isPrintable())
 			{
 				// will print the value of the object if it's not NULL and if it can be printed (type Void cant be)
