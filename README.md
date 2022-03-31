@@ -17,7 +17,7 @@ simply write your code lines in python
 
 ### Executing program
 
-Simpy start the program with double click on _my_python.exe_ in the Debug directory and start write in python
+Open the solution in visual studio, build and run the project.
 
 ## Help
 
