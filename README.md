@@ -8,7 +8,7 @@ my python interpreter written in c++
 * dealing with many errors and exceptions and printing them correctly to the user
 
 ## Description
-if you know write in python 
+if you know how to write in python 
 you can handle the inetrface
 by yourself with no instructions ;) 
 simply write your code lines in python
